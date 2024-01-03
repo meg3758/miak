@@ -10,7 +10,7 @@ else:
 # This class defines a complete generic visitor for a parse tree produced by pseudocodeParser.
 
 class pseudocodeVisitor(ParseTreeVisitor):
-    def __int__(self):
+    def __init__(self):
         self.code = ""
         self.tabs = 0
 
@@ -401,4 +401,4 @@ class pseudocodeVisitor(ParseTreeVisitor):
         return res
 
 
-del pseudocodeParser
+#del pseudocodeParser

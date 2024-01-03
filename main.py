@@ -6,8 +6,13 @@ from gen.pseudocodeVisitor import pseudocodeVisitor
 pseudocode = '''
 x:=3;
 if(x = 6){
-    y=6
-}'''
+    y:=6;
+}
+for ( i from 5 to 50 ){
+    function func_1(x, y){
+        x:=4;
+        }
+    }'''
 if __name__ == '__main__':
     input_stream = InputStream(pseudocode)
     lexer = pseudocodeLexer(input_stream)
@@ -16,5 +21,7 @@ if __name__ == '__main__':
     tree = parser.program()
     visitor = pseudocodeVisitor()
     visitor.visit(tree)
+    with open('code.py', 'w') as file:
+        file.write(visitor.code)
 
 
