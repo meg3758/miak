@@ -1,4 +1,4 @@
-# Generated from C:/Users/mcebu/PycharmProjects/miak/pseudocode.g4 by ANTLR 4.13.1
+# Generated from C:/Users/fuska/PycharmProjects/miak2/pseudocode.g4 by ANTLR 4.13.1
 from antlr4 import *
 from io import StringIO
 import sys

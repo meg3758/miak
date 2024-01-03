@@ -4,11 +4,15 @@ from gen.pseudocodeParser import pseudocodeParser
 from gen.pseudocodeVisitor import pseudocodeVisitor
 
 pseudocode = '''
-x:=3;
-if(x = 6){
-    y:=6;
+i:=3;
+i := i + 1;
+
+while(i < 10) {
+    function add(x,y){
+    x := x + y;
 }
-for ( i from 5 to 50 ){
+}
+for ( i := 40...50 ){
     function func_1(x, y){
         x:=4;
         }

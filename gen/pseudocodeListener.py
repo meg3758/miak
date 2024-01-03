@@ -1,4 +1,4 @@
-# Generated from C:/Users/mcebu/PycharmProjects/miak/pseudocode.g4 by ANTLR 4.13.1
+# Generated from C:/Users/fuska/PycharmProjects/miak2/pseudocode.g4 by ANTLR 4.13.1
 from antlr4 import *
 if "." in __name__:
     from .pseudocodeParser import pseudocodeParser
@@ -14,6 +14,15 @@ class pseudocodeListener(ParseTreeListener):
 
     # Exit a parse tree produced by pseudocodeParser#program.
     def exitProgram(self, ctx:pseudocodeParser.ProgramContext):
+        pass
+
+
+    # Enter a parse tree produced by pseudocodeParser#increment.
+    def enterIncrement(self, ctx:pseudocodeParser.IncrementContext):
+        pass
+
+    # Exit a parse tree produced by pseudocodeParser#increment.
+    def exitIncrement(self, ctx:pseudocodeParser.IncrementContext):
         pass
 
 

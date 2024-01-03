@@ -1,4 +1,3 @@
-# Generated from C:/Users/mcebu/PycharmProjects/miak/pseudocode.g4 by ANTLR 4.13.1
 from antlr4 import *
 
 if "." in __name__:
@@ -10,6 +9,22 @@ else:
 # This class defines a complete generic visitor for a parse tree produced by pseudocodeParser.
 
 class pseudocodeVisitor(ParseTreeVisitor):
+    def num_or_ID(self, id_c, num_c, ctx, comma):
+        token = ctx.getToken(pseudocodeParser.ID, id_c)
+        if token != None:
+            self.add_to_code('ID', token)
+            id_c += 1
+        else:
+            token = ctx.getToken(pseudocodeParser.NUMBER, num_c)
+            if token != None:
+                self.add_to_code('NUMBER', token)
+                num_c += 1
+        token = ctx.getToken(pseudocodeParser.COMMA, comma)
+        if token != None:
+            self.add_to_code('COMMA', token)
+            comma += 1
+        return id_c, num_c, comma
+
     def __init__(self):
         self.code = ""
         self.tabs = 0
@@ -174,6 +189,10 @@ class pseudocodeVisitor(ParseTreeVisitor):
 
         self.code += " in range("
 
+        token = ctx.getToken(pseudocodeParser.ASSIGN, 0)
+        if token != None:
+            pass
+
         id_ctr = 1
         token = ctx.getToken(pseudocodeParser.ID, id_ctr)
         if token != None:
@@ -220,6 +239,7 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             # self.add_to_code("R_BRACKET_OPEN", token)
             pass
+        self.code += " "
         c = ctx.getChild(2)
         c.accept(self)
 
@@ -249,7 +269,7 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             self.add_to_code('NOT', token)
             flag += 1
-
+        self.code
         c = ctx.getChild(flag)
         c.accept(self)
 
@@ -354,6 +374,8 @@ class pseudocodeVisitor(ParseTreeVisitor):
             self.add_to_code('C_BRACKET_CLOSE', token)
         return res
 
+
+
     # Visit a parse tree produced by pseudocodeParser#function.
     def visitFunction(self, ctx: pseudocodeParser.FunctionContext):
 
@@ -365,24 +387,17 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             self.add_to_code('R_BRACKET_OPEN', token)
 
-        node = ctx
-        result = self.defaultResult()
-        n = node.getChildCount()
-        for i in range(n):
-            c = node.getChild(i)
-            childResult = c.accept(self)
-            result = self.aggregateResult(result, childResult)
-            if i == 0 or i == n - 1 or i == n - 3 or i % 2 != 0:
-                continue
-            self.add_to_code('COMMA', ',')
-
-        token = ctx.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
+        token = ctx.getToken(pseudocodeParser.ID, 1)
         if token != None:
-            self.add_to_code('R_BRACKET_CLOSE', token)
+            self.add_to_code('ID', token)
 
-        token = ctx.getToken(pseudocodeParser.SEMICOLON, 0)
+        token = ctx.getToken(pseudocodeParser.COMMA, 0)
         if token != None:
-            self.add_to_code('SEMICOLON', token)
+            self.add_to_code('COMMA', token)
+
+        token = ctx.getToken(pseudocodeParser.NUMBER, 0)
+        if token != None:
+            self.add_to_code('NUMBER', token)
 
     # Visit a parse tree produced by pseudocodeParser#array_elem.
     def visitArray_elem(self, ctx: pseudocodeParser.Array_elemContext):
@@ -400,5 +415,46 @@ class pseudocodeVisitor(ParseTreeVisitor):
 
         return res
 
+    def visitIncrement(self, ctx:pseudocodeParser.IncrementContext):
+        num_c = 0
+        id_c = 1
+
+        token = ctx.getToken(pseudocodeParser.ID, 0)
+        if token != None:
+            self.add_to_code('ID', token)
+
+        token = ctx.getToken(pseudocodeParser.ASSIGN, 0)
+        if token != None:
+            self.code += " = "
+
+        token = ctx.getToken(pseudocodeParser.ID, 1)
+        if token != None:
+            self.add_to_code('ID', token)
+            id_c += 1
+        else:
+            token = ctx.getToken(pseudocodeParser.NUMBER, num_c)
+            if token != None:
+                self.add_to_code('NUMBER', token)
+                num_c += 1
+
+        token = ctx.getToken(pseudocodeParser.MATH_SYM, 0)
+        if token != None:
+            self.add_to_code('MATH_SYM', token)
+
+        token = ctx.getToken(pseudocodeParser.ID, id_c)
+        if token != None:
+            self.add_to_code('ID', token)
+            id_c += 1
+        else:
+            token = ctx.getToken(pseudocodeParser.NUMBER, num_c)
+            if token != None:
+                self.add_to_code('NUMBER', token)
+                num_c += 1
+        res = self.visitChildren(ctx)
+        token = ctx.getToken(pseudocodeParser.SEMICOLON, 0)
+        if token != None:
+            self.add_to_code('SEMICOLON', token)
+
+        return res
 
 #del pseudocodeParser
