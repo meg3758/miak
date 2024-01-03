@@ -1,16 +1,20 @@
-# This is a sample Python script.
+from antlr4 import*
+from gen.pseudocodeLexer import pseudocodeLexer
+from gen.pseudocodeParser import pseudocodeParser
+from gen.pseudocodeVisitor import pseudocodeVisitor
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+pseudocode = '''
+x:=3;
+if(x = 6){
+    y=6
+}'''
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    input_stream = InputStream(pseudocode)
+    lexer = pseudocodeLexer(input_stream)
+    token_stream = CommonTokenStream(lexer)
+    parser = pseudocodeParser(token_stream)
+    tree = parser.program()
+    visitor = pseudocodeVisitor()
+    visitor.visit(tree)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+

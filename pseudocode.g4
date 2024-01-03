@@ -25,13 +25,14 @@ SEMICOLON: ';';
 STRING: '"'[a-zA-Z0-9 \t\r\n]+'"';
 COMPARE_SYM: '=' | '>=' | '<=' | '<' | '>' | '!=';
 DIVISIBLE: 'divisible';
-PRINT: 'print';
 FROM: 'from';
 TO: 'to';
 BOOL: 'true' | 'false';
 BY: 'by';
 AND: 'and';
 OR: 'or';
+
+program: statement* EOF;
 
 array: S_BRACKET_OPEN (type(COMMA type)*)? S_BRACKET_CLOSE;
 
@@ -41,17 +42,24 @@ declaration: ID (S_BRACKET_OPEN NUMBER S_BRACKET_CLOSE)? ASSIGN type SEMICOLON;
 
 if_statement:IF R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE;
 
-for_statement: FOR R_BRACKET_OPEN ID FROM (NUMBER|ID) TO (NUMBER|ID) R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE;
+for_statement: FOR R_BRACKET_OPEN ID FROM (NUMBER|ID) TO (NUMBER|ID) R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE (ELSE C_BRACKET_OPEN (statement)+ C_BRACKET_CLOSE);
 
 while_statement: WHILE R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE;
 
-statement: (if_statement|for_statement|while_statement|declaration);
+statement: (if_statement|for_statement|while_statement|declaration|function_def|function);
 
-expr:((type|divisibility) (AND|OR|MATH_SYM|COMPARE_SYM)(type|expr|divisibility));
+expr:NOT? (type|divisibility) (AND|OR|MATH_SYM|COMPARE_SYM)(type|expr|divisibility);
 
 divisibility: (ID|NUMBER) IS DIVISIBLE BY NUMBER;
 
 return_statement: RETURN type SEMICOLON;
+
+function_def: FUNCTION ID R_BRACKET_OPEN (type(COMMA type)*)? R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* (return_statement)? C_BRACKET_CLOSE;
+
+function: ID R_BRACKET_OPEN (type(COMMA type)*)? R_BRACKET_CLOSE SEMICOLON;
+
+array_elem: ID S_BRACKET_OPEN type S_BRACKET_CLOSE;
+
 
 
 
