@@ -8,7 +8,47 @@ else:
 # This class defines a complete generic visitor for a parse tree produced by pseudocodeParser.
 
 class pseudocodeVisitor(ParseTreeVisitor):
+    def __int__(self):
+        self.code = ""
+        self.tabs = 0
+    def add_to_code(self,token,name):
+        name = str(name)
+        if token == "ASSIGN":
+            self.code += "="
 
+        elif token in ("COMPARE_SYM", "MATH_SYM"):
+            if name == "=":
+                name = "=="
+            self.code += name
+
+        elif token == "FUNCTION":
+            self.code += "def "
+
+        elif token == "C_BRACKET_OPEN":
+            self.code += ":\n"
+            self.tabs += 1
+            self.code += self.tabs * 4 * " "
+
+        elif token == "CURLY_BRACKET_END":
+            self.code = self.code[:-4]
+            self.tabs -= 1
+
+        elif token == "SEMICOLON":
+            self.code += "\n"
+            self.code += " " * 4 * self.tabs
+
+        elif token == "BOOL":
+            if name == "true":
+                self.code += "TRUE"
+            if name == "false":
+                self.code += "FALSE"
+
+        elif token in ["IF", "FOR", "OR", "AND", "NOT",
+                       "RETURN", "FUNCTION"]:
+            self.code += name + " "
+
+        else:
+            self.code += name
     # Visit a parse tree produced by pseudocodeParser#program.
     def visitProgram(self, ctx:pseudocodeParser.ProgramContext):
         return self.visitChildren(ctx)
