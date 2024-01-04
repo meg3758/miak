@@ -146,20 +146,24 @@ class pseudocodeVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by pseudocodeParser#if_statement.
     def visitIf_statement(self, ctx: pseudocodeParser.If_statementContext):
-        token = ctx.getToken(pseudocodeParser.IF, 0)
+        token = ctx.getToken(pseudocodeParser.IF_TOKEN, 0)
         if token != None:
-            self.add_to_code("IF", token)
+            self.add_to_code("IF_TOKEN", token)
 
         token = ctx.getToken(pseudocodeParser.R_BRACKET_OPEN, 0)
         if token != None:
-            # self.add_to_code("R_BRACKET_OPEN", token)
+            # self._add_to_code("R_BRACKET_OPEN", token)
             pass
+
+        self.code += " "
+
         c = ctx.getChild(2)
         c.accept(self)
 
+
         token = ctx.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
         if token != None:
-            # self.add_to_code("R_BRACKET_CLOSE", token)
+            # self._add_to_code("R_BRACKET_CLOSE", token)
             pass
         token = ctx.getToken(pseudocodeParser.C_BRACKET_OPEN, 0)
         if token != None:
@@ -171,6 +175,21 @@ class pseudocodeVisitor(ParseTreeVisitor):
         token = ctx.getToken(pseudocodeParser.C_BRACKET_CLOSE, 0)
         if token != None:
             self.add_to_code("C_BRACKET_CLOSE", token)
+
+        token = ctx.getToken(pseudocodeParser.ELSE, 0)
+        if token != None:
+            self.add_to_code("ELSE", token)
+
+            token = ctx.getToken(pseudocodeParser.C_BRACKET_OPEN, 1)
+            if token != None:
+                self.add_to_code("C_BRACKET_OPEN", token)
+
+            c = ctx.getChild(9)
+            c.accept(self)
+
+            token = ctx.getToken(pseudocodeParser.C_BRACKET_CLOSE, 1)
+            if token != None:
+                self.add_to_code("C_BRACKET_CLOSE", token)
 
     # Visit a parse tree produced by pseudocodeParser#for_statement.
     def visitFor_statement(self, ctx: pseudocodeParser.For_statementContext):
@@ -190,6 +209,10 @@ class pseudocodeVisitor(ParseTreeVisitor):
         self.code += " in range("
 
         token = ctx.getToken(pseudocodeParser.ASSIGN, 0)
+        if token != None:
+            pass
+
+        token = ctx.getToken(pseudocodeParser.BEETWEN, 0)
         if token != None:
             pass
 
@@ -269,7 +292,7 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             self.add_to_code('NOT', token)
             flag += 1
-        self.code
+
         c = ctx.getChild(flag)
         c.accept(self)
 
@@ -294,17 +317,15 @@ class pseudocodeVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by pseudocodeParser#divisibility.
     def visitDivisibility(self, ctx: pseudocodeParser.DivisibilityContext):
+        num_c = 0
         token = ctx.getToken(pseudocodeParser.ID, 0)
         if token != None:
             self.add_to_code('ID', token)
-
-        token = ctx.getToken(pseudocodeParser.NUMBER, 0)
-        if token != None:
-            self.add_to_code('NUMBER', token)
-
-        token = ctx.getToken(pseudocodeParser.IS, 0)
-        if token != None:
-            self.add_to_code('is', token)
+        else:
+            token = ctx.getToken(pseudocodeParser.NUMBER, num_c)
+            if token != None:
+                self.add_to_code('NUMBER', token)
+                num_c += 1
 
         token = ctx.getToken(pseudocodeParser.DIVISIBLE, 0)
         if token != None:
@@ -314,7 +335,7 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             self.add_to_code('BY', token)
 
-        token = ctx.getToken(pseudocodeParser.NUMBER, 0)
+        token = ctx.getToken(pseudocodeParser.NUMBER, num_c)
         if token != None:
             self.add_to_code('NUMBER', token)
 
@@ -325,10 +346,11 @@ class pseudocodeVisitor(ParseTreeVisitor):
         token = ctx.getToken(pseudocodeParser.RETURN, 0)
         if token != None:
             self.add_to_code("RETURN", token)
-
+        res = self.visitChildren(ctx)
         token = ctx.getToken(pseudocodeParser.SEMICOLON, 0)
         if token != None:
             self.add_to_code("SEMICOLON", token)
+        return res
 
     # Visit a parse tree produced by pseudocodeParser#function_def.
     def visitFunction_def(self, ctx: pseudocodeParser.Function_defContext):
@@ -374,8 +396,6 @@ class pseudocodeVisitor(ParseTreeVisitor):
             self.add_to_code('C_BRACKET_CLOSE', token)
         return res
 
-
-
     # Visit a parse tree produced by pseudocodeParser#function.
     def visitFunction(self, ctx: pseudocodeParser.FunctionContext):
 
@@ -387,17 +407,24 @@ class pseudocodeVisitor(ParseTreeVisitor):
         if token != None:
             self.add_to_code('R_BRACKET_OPEN', token)
 
-        token = ctx.getToken(pseudocodeParser.ID, 1)
-        if token != None:
-            self.add_to_code('ID', token)
+        node = ctx
+        result = self.defaultResult()
+        n = node.getChildCount()
+        for i in range(n):
+            c = node.getChild(i)
+            childResult = c.accept(self)
+            result = self.aggregateResult(result, childResult)
+            if i == 0 or i == n - 1 or i == n - 3 or i % 2 != 0:
+                continue
+            self.add_to_code('COMMA', ',')
 
-        token = ctx.getToken(pseudocodeParser.COMMA, 0)
+        token = ctx.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
         if token != None:
-            self.add_to_code('COMMA', token)
+            self.add_to_code('R_BRACKET_CLOSE', token)
 
-        token = ctx.getToken(pseudocodeParser.NUMBER, 0)
+        token = ctx.getToken(pseudocodeParser.SEMICOLON, 0)
         if token != None:
-            self.add_to_code('NUMBER', token)
+            self.add_to_code('SEMICOLON', token)
 
     # Visit a parse tree produced by pseudocodeParser#array_elem.
     def visitArray_elem(self, ctx: pseudocodeParser.Array_elemContext):
@@ -408,14 +435,13 @@ class pseudocodeVisitor(ParseTreeVisitor):
         token = ctx.getToken(pseudocodeParser.S_BRACKET_OPEN, 0)
         if token != None:
             self.add_to_code('S_BRACKET_OPEN', token)
-        res = self.visitChildren(ctx)
         token = ctx.getToken(pseudocodeParser.S_BRACKET_CLOSE, 0)
         if token != None:
             self.add_to_code('S_BRACKET_CLOSE', token)
 
-        return res
+        return self.visitChildren(ctx)
 
-    def visitIncrement(self, ctx:pseudocodeParser.IncrementContext):
+    def visitIncrement(self, ctx: pseudocodeParser.IncrementContext):
         num_c = 0
         id_c = 1
 
@@ -457,4 +483,4 @@ class pseudocodeVisitor(ParseTreeVisitor):
 
         return res
 
-#del pseudocodeParser
+# del pseudocodeParser

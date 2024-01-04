@@ -1,6 +1,6 @@
 grammar pseudocode;
 
-IF: 'if';
+IF_TOKEN: 'if';
 WHILE: 'while';
 FOR: 'for';
 ELSE: 'else';
@@ -31,6 +31,7 @@ BOOL: 'true' | 'false';
 BY: 'by';
 AND: 'and';
 OR: 'or';
+BEETWEN: '...';
 
 program: statement* EOF;
 
@@ -38,27 +39,27 @@ increment: ID ASSIGN (ID|NUMBER) MATH_SYM (ID|NUMBER) SEMICOLON;
 
 array: S_BRACKET_OPEN (type(COMMA type)*)? S_BRACKET_CLOSE;
 
-type: (ID|STRING|NUMBER|BOOL);
+type: (ID|STRING|NUMBER|BOOL|array_elem|array);
 
 declaration: ID (S_BRACKET_OPEN NUMBER S_BRACKET_CLOSE)? ASSIGN type SEMICOLON;
 
-if_statement:IF R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE;
+if_statement:IF_TOKEN R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE (ELSE C_BRACKET_OPEN (statement)+ C_BRACKET_CLOSE)?;
 
-for_statement: FOR R_BRACKET_OPEN ID ASSIGN NUMBER NUMBER R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE (ELSE C_BRACKET_OPEN (statement)+ C_BRACKET_CLOSE)?;
+for_statement: FOR R_BRACKET_OPEN ID ASSIGN NUMBER BEETWEN NUMBER R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE ;
 
-while_statement: WHILE R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* C_BRACKET_CLOSE;
+while_statement: WHILE R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (statement | SKIP_TOKEN)+ C_BRACKET_CLOSE;
 
-statement: (function|increment|for_statement|while_statement|declaration|function_def);
+statement: (increment|function|for_statement|while_statement|declaration|function_def|if_statement);
 
 expr:NOT? (type|divisibility) (AND|OR|MATH_SYM|COMPARE_SYM)(type|expr|divisibility);
 
-divisibility: (ID|NUMBER) IS DIVISIBLE BY NUMBER;
+divisibility: (ID|NUMBER) DIVISIBLE BY NUMBER;
 
 return_statement: RETURN type SEMICOLON;
 
 function_def: FUNCTION ID R_BRACKET_OPEN ((ID)(COMMA ID)*)? R_BRACKET_CLOSE C_BRACKET_OPEN (statement)* (return_statement)? C_BRACKET_CLOSE;
 
-function: ID R_BRACKET_OPEN ((ID|NUMBER)(COMMA (ID|NUMBER))*) R_BRACKET_CLOSE ;
+function: ID R_BRACKET_OPEN (type (COMMA | type)*)? R_BRACKET_CLOSE SEMICOLON ;
 
 array_elem: ID S_BRACKET_OPEN type S_BRACKET_CLOSE;
 

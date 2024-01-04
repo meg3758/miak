@@ -10,74 +10,78 @@ else:
 
 def serializedATN():
     return [
-        4,1,31,199,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,32,207,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,1,0,5,0,32,8,0,10,0,12,0,35,9,0,1,0,1,0,1,1,1,1,1,1,1,
         1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,5,2,50,8,2,10,2,12,2,53,9,2,3,2,55,
-        8,2,1,2,1,2,1,3,1,3,1,4,1,4,1,4,1,4,3,4,65,8,4,1,4,1,4,1,4,1,4,1,
-        5,1,5,1,5,1,5,1,5,1,5,5,5,77,8,5,10,5,12,5,80,9,5,1,5,1,5,1,6,1,
-        6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,5,6,93,8,6,10,6,12,6,96,9,6,1,6,1,
-        6,1,6,1,6,4,6,102,8,6,11,6,12,6,103,1,6,1,6,3,6,108,8,6,1,7,1,7,
-        1,7,1,7,1,7,1,7,5,7,116,8,7,10,7,12,7,119,9,7,1,7,1,7,1,8,1,8,1,
-        8,1,8,1,8,1,8,3,8,129,8,8,1,9,3,9,132,8,9,1,9,1,9,3,9,136,8,9,1,
-        9,1,9,1,9,1,9,3,9,142,8,9,1,10,1,10,1,10,1,10,1,10,1,10,1,11,1,11,
-        1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,5,12,160,8,12,10,12,12,12,
-        163,9,12,3,12,165,8,12,1,12,1,12,1,12,5,12,170,8,12,10,12,12,12,
-        173,9,12,1,12,3,12,176,8,12,1,12,1,12,1,13,1,13,1,13,1,13,1,13,5,
-        13,185,8,13,10,13,12,13,188,9,13,3,13,190,8,13,1,13,1,13,1,14,1,
-        14,1,14,1,14,1,14,1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,20,22,24,
-        26,28,0,3,1,0,20,21,3,0,20,21,23,23,28,28,3,0,17,17,24,24,30,31,
-        207,0,33,1,0,0,0,2,38,1,0,0,0,4,45,1,0,0,0,6,58,1,0,0,0,8,60,1,0,
-        0,0,10,70,1,0,0,0,12,83,1,0,0,0,14,109,1,0,0,0,16,128,1,0,0,0,18,
-        131,1,0,0,0,20,143,1,0,0,0,22,149,1,0,0,0,24,153,1,0,0,0,26,179,
-        1,0,0,0,28,193,1,0,0,0,30,32,3,16,8,0,31,30,1,0,0,0,32,35,1,0,0,
-        0,33,31,1,0,0,0,33,34,1,0,0,0,34,36,1,0,0,0,35,33,1,0,0,0,36,37,
-        5,0,0,1,37,1,1,0,0,0,38,39,5,20,0,0,39,40,5,5,0,0,40,41,7,0,0,0,
-        41,42,5,17,0,0,42,43,7,0,0,0,43,44,5,22,0,0,44,3,1,0,0,0,45,54,5,
-        15,0,0,46,51,3,6,3,0,47,48,5,18,0,0,48,50,3,6,3,0,49,47,1,0,0,0,
-        50,53,1,0,0,0,51,49,1,0,0,0,51,52,1,0,0,0,52,55,1,0,0,0,53,51,1,
-        0,0,0,54,46,1,0,0,0,54,55,1,0,0,0,55,56,1,0,0,0,56,57,5,16,0,0,57,
-        5,1,0,0,0,58,59,7,1,0,0,59,7,1,0,0,0,60,64,5,20,0,0,61,62,5,15,0,
-        0,62,63,5,21,0,0,63,65,5,16,0,0,64,61,1,0,0,0,64,65,1,0,0,0,65,66,
-        1,0,0,0,66,67,5,5,0,0,67,68,3,6,3,0,68,69,5,22,0,0,69,9,1,0,0,0,
-        70,71,5,1,0,0,71,72,5,13,0,0,72,73,3,18,9,0,73,74,5,14,0,0,74,78,
-        5,11,0,0,75,77,3,16,8,0,76,75,1,0,0,0,77,80,1,0,0,0,78,76,1,0,0,
-        0,78,79,1,0,0,0,79,81,1,0,0,0,80,78,1,0,0,0,81,82,5,12,0,0,82,11,
-        1,0,0,0,83,84,5,3,0,0,84,85,5,13,0,0,85,86,5,20,0,0,86,87,5,5,0,
-        0,87,88,5,21,0,0,88,89,5,21,0,0,89,90,5,14,0,0,90,94,5,11,0,0,91,
-        93,3,16,8,0,92,91,1,0,0,0,93,96,1,0,0,0,94,92,1,0,0,0,94,95,1,0,
-        0,0,95,97,1,0,0,0,96,94,1,0,0,0,97,107,5,12,0,0,98,99,5,4,0,0,99,
-        101,5,11,0,0,100,102,3,16,8,0,101,100,1,0,0,0,102,103,1,0,0,0,103,
-        101,1,0,0,0,103,104,1,0,0,0,104,105,1,0,0,0,105,106,5,12,0,0,106,
-        108,1,0,0,0,107,98,1,0,0,0,107,108,1,0,0,0,108,13,1,0,0,0,109,110,
-        5,2,0,0,110,111,5,13,0,0,111,112,3,18,9,0,112,113,5,14,0,0,113,117,
-        5,11,0,0,114,116,3,16,8,0,115,114,1,0,0,0,116,119,1,0,0,0,117,115,
-        1,0,0,0,117,118,1,0,0,0,118,120,1,0,0,0,119,117,1,0,0,0,120,121,
-        5,12,0,0,121,15,1,0,0,0,122,129,3,26,13,0,123,129,3,2,1,0,124,129,
-        3,12,6,0,125,129,3,14,7,0,126,129,3,8,4,0,127,129,3,24,12,0,128,
-        122,1,0,0,0,128,123,1,0,0,0,128,124,1,0,0,0,128,125,1,0,0,0,128,
-        126,1,0,0,0,128,127,1,0,0,0,129,17,1,0,0,0,130,132,5,9,0,0,131,130,
-        1,0,0,0,131,132,1,0,0,0,132,135,1,0,0,0,133,136,3,6,3,0,134,136,
-        3,20,10,0,135,133,1,0,0,0,135,134,1,0,0,0,136,137,1,0,0,0,137,141,
-        7,2,0,0,138,142,3,6,3,0,139,142,3,18,9,0,140,142,3,20,10,0,141,138,
-        1,0,0,0,141,139,1,0,0,0,141,140,1,0,0,0,142,19,1,0,0,0,143,144,7,
-        0,0,0,144,145,5,6,0,0,145,146,5,25,0,0,146,147,5,29,0,0,147,148,
-        5,21,0,0,148,21,1,0,0,0,149,150,5,7,0,0,150,151,3,6,3,0,151,152,
-        5,22,0,0,152,23,1,0,0,0,153,154,5,10,0,0,154,155,5,20,0,0,155,164,
-        5,13,0,0,156,161,5,20,0,0,157,158,5,18,0,0,158,160,5,20,0,0,159,
-        157,1,0,0,0,160,163,1,0,0,0,161,159,1,0,0,0,161,162,1,0,0,0,162,
-        165,1,0,0,0,163,161,1,0,0,0,164,156,1,0,0,0,164,165,1,0,0,0,165,
-        166,1,0,0,0,166,167,5,14,0,0,167,171,5,11,0,0,168,170,3,16,8,0,169,
-        168,1,0,0,0,170,173,1,0,0,0,171,169,1,0,0,0,171,172,1,0,0,0,172,
-        175,1,0,0,0,173,171,1,0,0,0,174,176,3,22,11,0,175,174,1,0,0,0,175,
-        176,1,0,0,0,176,177,1,0,0,0,177,178,5,12,0,0,178,25,1,0,0,0,179,
-        180,5,20,0,0,180,189,5,13,0,0,181,186,7,0,0,0,182,183,5,18,0,0,183,
-        185,7,0,0,0,184,182,1,0,0,0,185,188,1,0,0,0,186,184,1,0,0,0,186,
-        187,1,0,0,0,187,190,1,0,0,0,188,186,1,0,0,0,189,181,1,0,0,0,189,
-        190,1,0,0,0,190,191,1,0,0,0,191,192,5,14,0,0,192,27,1,0,0,0,193,
-        194,5,20,0,0,194,195,5,15,0,0,195,196,3,6,3,0,196,197,5,16,0,0,197,
-        29,1,0,0,0,19,33,51,54,64,78,94,103,107,117,128,131,135,141,161,
-        164,171,175,186,189
+        8,2,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,3,3,3,65,8,3,1,4,1,4,1,4,1,4,3,
+        4,71,8,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,5,5,83,8,5,10,5,
+        12,5,86,9,5,1,5,1,5,1,5,1,5,4,5,92,8,5,11,5,12,5,93,1,5,1,5,3,5,
+        98,8,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,5,6,110,8,6,10,6,
+        12,6,113,9,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,4,7,124,8,7,11,
+        7,12,7,125,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,137,8,8,1,9,3,
+        9,140,8,9,1,9,1,9,3,9,144,8,9,1,9,1,9,1,9,1,9,3,9,150,8,9,1,10,1,
+        10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,
+        12,5,12,167,8,12,10,12,12,12,170,9,12,3,12,172,8,12,1,12,1,12,1,
+        12,5,12,177,8,12,10,12,12,12,180,9,12,1,12,3,12,183,8,12,1,12,1,
+        12,1,13,1,13,1,13,1,13,1,13,5,13,192,8,13,10,13,12,13,195,9,13,3,
+        13,197,8,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,0,0,15,
+        0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,0,2,1,0,20,21,3,0,17,17,
+        24,24,30,31,223,0,33,1,0,0,0,2,38,1,0,0,0,4,45,1,0,0,0,6,64,1,0,
+        0,0,8,66,1,0,0,0,10,76,1,0,0,0,12,99,1,0,0,0,14,116,1,0,0,0,16,136,
+        1,0,0,0,18,139,1,0,0,0,20,151,1,0,0,0,22,156,1,0,0,0,24,160,1,0,
+        0,0,26,186,1,0,0,0,28,201,1,0,0,0,30,32,3,16,8,0,31,30,1,0,0,0,32,
+        35,1,0,0,0,33,31,1,0,0,0,33,34,1,0,0,0,34,36,1,0,0,0,35,33,1,0,0,
+        0,36,37,5,0,0,1,37,1,1,0,0,0,38,39,5,20,0,0,39,40,5,5,0,0,40,41,
+        7,0,0,0,41,42,5,17,0,0,42,43,7,0,0,0,43,44,5,22,0,0,44,3,1,0,0,0,
+        45,54,5,15,0,0,46,51,3,6,3,0,47,48,5,18,0,0,48,50,3,6,3,0,49,47,
+        1,0,0,0,50,53,1,0,0,0,51,49,1,0,0,0,51,52,1,0,0,0,52,55,1,0,0,0,
+        53,51,1,0,0,0,54,46,1,0,0,0,54,55,1,0,0,0,55,56,1,0,0,0,56,57,5,
+        16,0,0,57,5,1,0,0,0,58,65,5,20,0,0,59,65,5,23,0,0,60,65,5,21,0,0,
+        61,65,5,28,0,0,62,65,3,28,14,0,63,65,3,4,2,0,64,58,1,0,0,0,64,59,
+        1,0,0,0,64,60,1,0,0,0,64,61,1,0,0,0,64,62,1,0,0,0,64,63,1,0,0,0,
+        65,7,1,0,0,0,66,70,5,20,0,0,67,68,5,15,0,0,68,69,5,21,0,0,69,71,
+        5,16,0,0,70,67,1,0,0,0,70,71,1,0,0,0,71,72,1,0,0,0,72,73,5,5,0,0,
+        73,74,3,6,3,0,74,75,5,22,0,0,75,9,1,0,0,0,76,77,5,1,0,0,77,78,5,
+        13,0,0,78,79,3,18,9,0,79,80,5,14,0,0,80,84,5,11,0,0,81,83,3,16,8,
+        0,82,81,1,0,0,0,83,86,1,0,0,0,84,82,1,0,0,0,84,85,1,0,0,0,85,87,
+        1,0,0,0,86,84,1,0,0,0,87,97,5,12,0,0,88,89,5,4,0,0,89,91,5,11,0,
+        0,90,92,3,16,8,0,91,90,1,0,0,0,92,93,1,0,0,0,93,91,1,0,0,0,93,94,
+        1,0,0,0,94,95,1,0,0,0,95,96,5,12,0,0,96,98,1,0,0,0,97,88,1,0,0,0,
+        97,98,1,0,0,0,98,11,1,0,0,0,99,100,5,3,0,0,100,101,5,13,0,0,101,
+        102,5,20,0,0,102,103,5,5,0,0,103,104,5,21,0,0,104,105,5,32,0,0,105,
+        106,5,21,0,0,106,107,5,14,0,0,107,111,5,11,0,0,108,110,3,16,8,0,
+        109,108,1,0,0,0,110,113,1,0,0,0,111,109,1,0,0,0,111,112,1,0,0,0,
+        112,114,1,0,0,0,113,111,1,0,0,0,114,115,5,12,0,0,115,13,1,0,0,0,
+        116,117,5,2,0,0,117,118,5,13,0,0,118,119,3,18,9,0,119,120,5,14,0,
+        0,120,123,5,11,0,0,121,124,3,16,8,0,122,124,5,8,0,0,123,121,1,0,
+        0,0,123,122,1,0,0,0,124,125,1,0,0,0,125,123,1,0,0,0,125,126,1,0,
+        0,0,126,127,1,0,0,0,127,128,5,12,0,0,128,15,1,0,0,0,129,137,3,2,
+        1,0,130,137,3,26,13,0,131,137,3,12,6,0,132,137,3,14,7,0,133,137,
+        3,8,4,0,134,137,3,24,12,0,135,137,3,10,5,0,136,129,1,0,0,0,136,130,
+        1,0,0,0,136,131,1,0,0,0,136,132,1,0,0,0,136,133,1,0,0,0,136,134,
+        1,0,0,0,136,135,1,0,0,0,137,17,1,0,0,0,138,140,5,9,0,0,139,138,1,
+        0,0,0,139,140,1,0,0,0,140,143,1,0,0,0,141,144,3,6,3,0,142,144,3,
+        20,10,0,143,141,1,0,0,0,143,142,1,0,0,0,144,145,1,0,0,0,145,149,
+        7,1,0,0,146,150,3,6,3,0,147,150,3,18,9,0,148,150,3,20,10,0,149,146,
+        1,0,0,0,149,147,1,0,0,0,149,148,1,0,0,0,150,19,1,0,0,0,151,152,7,
+        0,0,0,152,153,5,25,0,0,153,154,5,29,0,0,154,155,5,21,0,0,155,21,
+        1,0,0,0,156,157,5,7,0,0,157,158,3,6,3,0,158,159,5,22,0,0,159,23,
+        1,0,0,0,160,161,5,10,0,0,161,162,5,20,0,0,162,171,5,13,0,0,163,168,
+        5,20,0,0,164,165,5,18,0,0,165,167,5,20,0,0,166,164,1,0,0,0,167,170,
+        1,0,0,0,168,166,1,0,0,0,168,169,1,0,0,0,169,172,1,0,0,0,170,168,
+        1,0,0,0,171,163,1,0,0,0,171,172,1,0,0,0,172,173,1,0,0,0,173,174,
+        5,14,0,0,174,178,5,11,0,0,175,177,3,16,8,0,176,175,1,0,0,0,177,180,
+        1,0,0,0,178,176,1,0,0,0,178,179,1,0,0,0,179,182,1,0,0,0,180,178,
+        1,0,0,0,181,183,3,22,11,0,182,181,1,0,0,0,182,183,1,0,0,0,183,184,
+        1,0,0,0,184,185,5,12,0,0,185,25,1,0,0,0,186,187,5,20,0,0,187,196,
+        5,13,0,0,188,193,3,6,3,0,189,192,5,18,0,0,190,192,3,6,3,0,191,189,
+        1,0,0,0,191,190,1,0,0,0,192,195,1,0,0,0,193,191,1,0,0,0,193,194,
+        1,0,0,0,194,197,1,0,0,0,195,193,1,0,0,0,196,188,1,0,0,0,196,197,
+        1,0,0,0,197,198,1,0,0,0,198,199,5,14,0,0,199,200,5,22,0,0,200,27,
+        1,0,0,0,201,202,5,20,0,0,202,203,5,15,0,0,203,204,3,6,3,0,204,205,
+        5,16,0,0,205,29,1,0,0,0,22,33,51,54,64,70,84,93,97,111,123,125,136,
+        139,143,149,168,171,178,182,191,193,196
     ]
 
 class pseudocodeParser ( Parser ):
@@ -95,15 +99,15 @@ class pseudocodeParser ( Parser ):
                      "'{'", "'}'", "'('", "')'", "'['", "']'", "<INVALID>", 
                      "','", "<INVALID>", "<INVALID>", "<INVALID>", "';'", 
                      "<INVALID>", "<INVALID>", "'divisible'", "'from'", 
-                     "'to'", "<INVALID>", "'by'", "'and'", "'or'" ]
+                     "'to'", "<INVALID>", "'by'", "'and'", "'or'", "'...'" ]
 
-    symbolicNames = [ "<INVALID>", "IF", "WHILE", "FOR", "ELSE", "ASSIGN", 
+    symbolicNames = [ "<INVALID>", "IF_TOKEN", "WHILE", "FOR", "ELSE", "ASSIGN", 
                       "IS", "RETURN", "SKIP_TOKEN", "NOT", "FUNCTION", "C_BRACKET_OPEN", 
                       "C_BRACKET_CLOSE", "R_BRACKET_OPEN", "R_BRACKET_CLOSE", 
                       "S_BRACKET_OPEN", "S_BRACKET_CLOSE", "MATH_SYM", "COMMA", 
                       "WHITESPACE", "ID", "NUMBER", "SEMICOLON", "STRING", 
                       "COMPARE_SYM", "DIVISIBLE", "FROM", "TO", "BOOL", 
-                      "BY", "AND", "OR" ]
+                      "BY", "AND", "OR", "BEETWEN" ]
 
     RULE_program = 0
     RULE_increment = 1
@@ -127,7 +131,7 @@ class pseudocodeParser ( Parser ):
                    "function", "array_elem" ]
 
     EOF = Token.EOF
-    IF=1
+    IF_TOKEN=1
     WHILE=2
     FOR=3
     ELSE=4
@@ -158,6 +162,7 @@ class pseudocodeParser ( Parser ):
     BY=29
     AND=30
     OR=31
+    BEETWEN=32
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -215,7 +220,7 @@ class pseudocodeParser ( Parser ):
             self.state = 33
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049614) != 0):
                 self.state = 30
                 self.statement()
                 self.state = 35
@@ -377,7 +382,7 @@ class pseudocodeParser ( Parser ):
             self.state = 54
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 279969792) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 280002560) != 0):
                 self.state = 46
                 self.type_()
                 self.state = 51
@@ -424,6 +429,14 @@ class pseudocodeParser ( Parser ):
         def BOOL(self):
             return self.getToken(pseudocodeParser.BOOL, 0)
 
+        def array_elem(self):
+            return self.getTypedRuleContext(pseudocodeParser.Array_elemContext,0)
+
+
+        def array(self):
+            return self.getTypedRuleContext(pseudocodeParser.ArrayContext,0)
+
+
         def getRuleIndex(self):
             return pseudocodeParser.RULE_type
 
@@ -448,16 +461,42 @@ class pseudocodeParser ( Parser ):
 
         localctx = pseudocodeParser.TypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_type)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 58
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 279969792) != 0)):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+            self.state = 64
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+            if la_ == 1:
+                self.state = 58
+                self.match(pseudocodeParser.ID)
+                pass
+
+            elif la_ == 2:
+                self.state = 59
+                self.match(pseudocodeParser.STRING)
+                pass
+
+            elif la_ == 3:
+                self.state = 60
+                self.match(pseudocodeParser.NUMBER)
+                pass
+
+            elif la_ == 4:
+                self.state = 61
+                self.match(pseudocodeParser.BOOL)
+                pass
+
+            elif la_ == 5:
+                self.state = 62
+                self.array_elem()
+                pass
+
+            elif la_ == 6:
+                self.state = 63
+                self.array()
+                pass
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -523,25 +562,25 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
+            self.state = 66
             self.match(pseudocodeParser.ID)
-            self.state = 64
+            self.state = 70
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==15:
-                self.state = 61
+                self.state = 67
                 self.match(pseudocodeParser.S_BRACKET_OPEN)
-                self.state = 62
+                self.state = 68
                 self.match(pseudocodeParser.NUMBER)
-                self.state = 63
+                self.state = 69
                 self.match(pseudocodeParser.S_BRACKET_CLOSE)
 
 
-            self.state = 66
+            self.state = 72
             self.match(pseudocodeParser.ASSIGN)
-            self.state = 67
+            self.state = 73
             self.type_()
-            self.state = 68
+            self.state = 74
             self.match(pseudocodeParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -559,8 +598,8 @@ class pseudocodeParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IF(self):
-            return self.getToken(pseudocodeParser.IF, 0)
+        def IF_TOKEN(self):
+            return self.getToken(pseudocodeParser.IF_TOKEN, 0)
 
         def R_BRACKET_OPEN(self):
             return self.getToken(pseudocodeParser.R_BRACKET_OPEN, 0)
@@ -572,11 +611,17 @@ class pseudocodeParser ( Parser ):
         def R_BRACKET_CLOSE(self):
             return self.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
 
-        def C_BRACKET_OPEN(self):
-            return self.getToken(pseudocodeParser.C_BRACKET_OPEN, 0)
+        def C_BRACKET_OPEN(self, i:int=None):
+            if i is None:
+                return self.getTokens(pseudocodeParser.C_BRACKET_OPEN)
+            else:
+                return self.getToken(pseudocodeParser.C_BRACKET_OPEN, i)
 
-        def C_BRACKET_CLOSE(self):
-            return self.getToken(pseudocodeParser.C_BRACKET_CLOSE, 0)
+        def C_BRACKET_CLOSE(self, i:int=None):
+            if i is None:
+                return self.getTokens(pseudocodeParser.C_BRACKET_CLOSE)
+            else:
+                return self.getToken(pseudocodeParser.C_BRACKET_CLOSE, i)
 
         def statement(self, i:int=None):
             if i is None:
@@ -584,6 +629,9 @@ class pseudocodeParser ( Parser ):
             else:
                 return self.getTypedRuleContext(pseudocodeParser.StatementContext,i)
 
+
+        def ELSE(self):
+            return self.getToken(pseudocodeParser.ELSE, 0)
 
         def getRuleIndex(self):
             return pseudocodeParser.RULE_if_statement
@@ -612,28 +660,52 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 70
-            self.match(pseudocodeParser.IF)
-            self.state = 71
+            self.state = 76
+            self.match(pseudocodeParser.IF_TOKEN)
+            self.state = 77
             self.match(pseudocodeParser.R_BRACKET_OPEN)
-            self.state = 72
-            self.expr()
-            self.state = 73
-            self.match(pseudocodeParser.R_BRACKET_CLOSE)
-            self.state = 74
-            self.match(pseudocodeParser.C_BRACKET_OPEN)
             self.state = 78
+            self.expr()
+            self.state = 79
+            self.match(pseudocodeParser.R_BRACKET_CLOSE)
+            self.state = 80
+            self.match(pseudocodeParser.C_BRACKET_OPEN)
+            self.state = 84
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0):
-                self.state = 75
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049614) != 0):
+                self.state = 81
                 self.statement()
-                self.state = 80
+                self.state = 86
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 81
+            self.state = 87
             self.match(pseudocodeParser.C_BRACKET_CLOSE)
+            self.state = 97
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==4:
+                self.state = 88
+                self.match(pseudocodeParser.ELSE)
+                self.state = 89
+                self.match(pseudocodeParser.C_BRACKET_OPEN)
+                self.state = 91 
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while True:
+                    self.state = 90
+                    self.statement()
+                    self.state = 93 
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1049614) != 0)):
+                        break
+
+                self.state = 95
+                self.match(pseudocodeParser.C_BRACKET_CLOSE)
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -668,20 +740,17 @@ class pseudocodeParser ( Parser ):
             else:
                 return self.getToken(pseudocodeParser.NUMBER, i)
 
+        def BEETWEN(self):
+            return self.getToken(pseudocodeParser.BEETWEN, 0)
+
         def R_BRACKET_CLOSE(self):
             return self.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
 
-        def C_BRACKET_OPEN(self, i:int=None):
-            if i is None:
-                return self.getTokens(pseudocodeParser.C_BRACKET_OPEN)
-            else:
-                return self.getToken(pseudocodeParser.C_BRACKET_OPEN, i)
+        def C_BRACKET_OPEN(self):
+            return self.getToken(pseudocodeParser.C_BRACKET_OPEN, 0)
 
-        def C_BRACKET_CLOSE(self, i:int=None):
-            if i is None:
-                return self.getTokens(pseudocodeParser.C_BRACKET_CLOSE)
-            else:
-                return self.getToken(pseudocodeParser.C_BRACKET_CLOSE, i)
+        def C_BRACKET_CLOSE(self):
+            return self.getToken(pseudocodeParser.C_BRACKET_CLOSE, 0)
 
         def statement(self, i:int=None):
             if i is None:
@@ -689,9 +758,6 @@ class pseudocodeParser ( Parser ):
             else:
                 return self.getTypedRuleContext(pseudocodeParser.StatementContext,i)
 
-
-        def ELSE(self):
-            return self.getToken(pseudocodeParser.ELSE, 0)
 
         def getRuleIndex(self):
             return pseudocodeParser.RULE_for_statement
@@ -720,58 +786,36 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 83
+            self.state = 99
             self.match(pseudocodeParser.FOR)
-            self.state = 84
+            self.state = 100
             self.match(pseudocodeParser.R_BRACKET_OPEN)
-            self.state = 85
+            self.state = 101
             self.match(pseudocodeParser.ID)
-            self.state = 86
+            self.state = 102
             self.match(pseudocodeParser.ASSIGN)
-            self.state = 87
+            self.state = 103
             self.match(pseudocodeParser.NUMBER)
-            self.state = 88
+            self.state = 104
+            self.match(pseudocodeParser.BEETWEN)
+            self.state = 105
             self.match(pseudocodeParser.NUMBER)
-            self.state = 89
+            self.state = 106
             self.match(pseudocodeParser.R_BRACKET_CLOSE)
-            self.state = 90
-            self.match(pseudocodeParser.C_BRACKET_OPEN)
-            self.state = 94
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0):
-                self.state = 91
-                self.statement()
-                self.state = 96
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 97
-            self.match(pseudocodeParser.C_BRACKET_CLOSE)
             self.state = 107
+            self.match(pseudocodeParser.C_BRACKET_OPEN)
+            self.state = 111
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==4:
-                self.state = 98
-                self.match(pseudocodeParser.ELSE)
-                self.state = 99
-                self.match(pseudocodeParser.C_BRACKET_OPEN)
-                self.state = 101 
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049614) != 0):
+                self.state = 108
+                self.statement()
+                self.state = 113
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while True:
-                    self.state = 100
-                    self.statement()
-                    self.state = 103 
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0)):
-                        break
 
-                self.state = 105
-                self.match(pseudocodeParser.C_BRACKET_CLOSE)
-
-
+            self.state = 114
+            self.match(pseudocodeParser.C_BRACKET_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -814,6 +858,12 @@ class pseudocodeParser ( Parser ):
                 return self.getTypedRuleContext(pseudocodeParser.StatementContext,i)
 
 
+        def SKIP_TOKEN(self, i:int=None):
+            if i is None:
+                return self.getTokens(pseudocodeParser.SKIP_TOKEN)
+            else:
+                return self.getToken(pseudocodeParser.SKIP_TOKEN, i)
+
         def getRuleIndex(self):
             return pseudocodeParser.RULE_while_statement
 
@@ -841,27 +891,41 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 116
             self.match(pseudocodeParser.WHILE)
-            self.state = 110
-            self.match(pseudocodeParser.R_BRACKET_OPEN)
-            self.state = 111
-            self.expr()
-            self.state = 112
-            self.match(pseudocodeParser.R_BRACKET_CLOSE)
-            self.state = 113
-            self.match(pseudocodeParser.C_BRACKET_OPEN)
             self.state = 117
+            self.match(pseudocodeParser.R_BRACKET_OPEN)
+            self.state = 118
+            self.expr()
+            self.state = 119
+            self.match(pseudocodeParser.R_BRACKET_CLOSE)
+            self.state = 120
+            self.match(pseudocodeParser.C_BRACKET_OPEN)
+            self.state = 123 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0):
-                self.state = 114
-                self.statement()
-                self.state = 119
+            while True:
+                self.state = 123
+                self._errHandler.sync(self)
+                token = self._input.LA(1)
+                if token in [1, 2, 3, 10, 20]:
+                    self.state = 121
+                    self.statement()
+                    pass
+                elif token in [8]:
+                    self.state = 122
+                    self.match(pseudocodeParser.SKIP_TOKEN)
+                    pass
+                else:
+                    raise NoViableAltException(self)
+
+                self.state = 125 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1049870) != 0)):
+                    break
 
-            self.state = 120
+            self.state = 127
             self.match(pseudocodeParser.C_BRACKET_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
@@ -879,12 +943,12 @@ class pseudocodeParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def function(self):
-            return self.getTypedRuleContext(pseudocodeParser.FunctionContext,0)
-
-
         def increment(self):
             return self.getTypedRuleContext(pseudocodeParser.IncrementContext,0)
+
+
+        def function(self):
+            return self.getTypedRuleContext(pseudocodeParser.FunctionContext,0)
 
 
         def for_statement(self):
@@ -901,6 +965,10 @@ class pseudocodeParser ( Parser ):
 
         def function_def(self):
             return self.getTypedRuleContext(pseudocodeParser.Function_defContext,0)
+
+
+        def if_statement(self):
+            return self.getTypedRuleContext(pseudocodeParser.If_statementContext,0)
 
 
         def getRuleIndex(self):
@@ -929,37 +997,42 @@ class pseudocodeParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 128
+            self.state = 136
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
-                self.state = 122
-                self.function()
-                pass
-
-            elif la_ == 2:
-                self.state = 123
+                self.state = 129
                 self.increment()
                 pass
 
+            elif la_ == 2:
+                self.state = 130
+                self.function()
+                pass
+
             elif la_ == 3:
-                self.state = 124
+                self.state = 131
                 self.for_statement()
                 pass
 
             elif la_ == 4:
-                self.state = 125
+                self.state = 132
                 self.while_statement()
                 pass
 
             elif la_ == 5:
-                self.state = 126
+                self.state = 133
                 self.declaration()
                 pass
 
             elif la_ == 6:
-                self.state = 127
+                self.state = 134
                 self.function_def()
+                pass
+
+            elif la_ == 7:
+                self.state = 135
+                self.if_statement()
                 pass
 
 
@@ -1039,50 +1112,50 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 131
+            self.state = 139
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==9:
-                self.state = 130
+                self.state = 138
                 self.match(pseudocodeParser.NOT)
 
 
-            self.state = 135
+            self.state = 143
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
             if la_ == 1:
-                self.state = 133
+                self.state = 141
                 self.type_()
                 pass
 
             elif la_ == 2:
-                self.state = 134
+                self.state = 142
                 self.divisibility()
                 pass
 
 
-            self.state = 137
+            self.state = 145
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3238133760) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 141
+            self.state = 149
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
             if la_ == 1:
-                self.state = 138
+                self.state = 146
                 self.type_()
                 pass
 
             elif la_ == 2:
-                self.state = 139
+                self.state = 147
                 self.expr()
                 pass
 
             elif la_ == 3:
-                self.state = 140
+                self.state = 148
                 self.divisibility()
                 pass
 
@@ -1102,9 +1175,6 @@ class pseudocodeParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-
-        def IS(self):
-            return self.getToken(pseudocodeParser.IS, 0)
 
         def DIVISIBLE(self):
             return self.getToken(pseudocodeParser.DIVISIBLE, 0)
@@ -1148,20 +1218,18 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 143
+            self.state = 151
             _la = self._input.LA(1)
             if not(_la==20 or _la==21):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 144
-            self.match(pseudocodeParser.IS)
-            self.state = 145
+            self.state = 152
             self.match(pseudocodeParser.DIVISIBLE)
-            self.state = 146
+            self.state = 153
             self.match(pseudocodeParser.BY)
-            self.state = 147
+            self.state = 154
             self.match(pseudocodeParser.NUMBER)
         except RecognitionException as re:
             localctx.exception = re
@@ -1215,11 +1283,11 @@ class pseudocodeParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_return_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 149
+            self.state = 156
             self.match(pseudocodeParser.RETURN)
-            self.state = 150
+            self.state = 157
             self.type_()
-            self.state = 151
+            self.state = 158
             self.match(pseudocodeParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -1302,55 +1370,55 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 153
+            self.state = 160
             self.match(pseudocodeParser.FUNCTION)
-            self.state = 154
+            self.state = 161
             self.match(pseudocodeParser.ID)
-            self.state = 155
+            self.state = 162
             self.match(pseudocodeParser.R_BRACKET_OPEN)
-            self.state = 164
+            self.state = 171
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==20:
-                self.state = 156
+                self.state = 163
                 self.match(pseudocodeParser.ID)
-                self.state = 161
+                self.state = 168
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==18:
-                    self.state = 157
+                    self.state = 164
                     self.match(pseudocodeParser.COMMA)
-                    self.state = 158
+                    self.state = 165
                     self.match(pseudocodeParser.ID)
-                    self.state = 163
+                    self.state = 170
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 166
+            self.state = 173
             self.match(pseudocodeParser.R_BRACKET_CLOSE)
-            self.state = 167
+            self.state = 174
             self.match(pseudocodeParser.C_BRACKET_OPEN)
-            self.state = 171
+            self.state = 178
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049612) != 0):
-                self.state = 168
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1049614) != 0):
+                self.state = 175
                 self.statement()
-                self.state = 173
+                self.state = 180
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 175
+            self.state = 182
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==7:
-                self.state = 174
+                self.state = 181
                 self.return_statement()
 
 
-            self.state = 177
+            self.state = 184
             self.match(pseudocodeParser.C_BRACKET_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
@@ -1368,11 +1436,8 @@ class pseudocodeParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self, i:int=None):
-            if i is None:
-                return self.getTokens(pseudocodeParser.ID)
-            else:
-                return self.getToken(pseudocodeParser.ID, i)
+        def ID(self):
+            return self.getToken(pseudocodeParser.ID, 0)
 
         def R_BRACKET_OPEN(self):
             return self.getToken(pseudocodeParser.R_BRACKET_OPEN, 0)
@@ -1380,11 +1445,15 @@ class pseudocodeParser ( Parser ):
         def R_BRACKET_CLOSE(self):
             return self.getToken(pseudocodeParser.R_BRACKET_CLOSE, 0)
 
-        def NUMBER(self, i:int=None):
+        def SEMICOLON(self):
+            return self.getToken(pseudocodeParser.SEMICOLON, 0)
+
+        def type_(self, i:int=None):
             if i is None:
-                return self.getTokens(pseudocodeParser.NUMBER)
+                return self.getTypedRuleContexts(pseudocodeParser.TypeContext)
             else:
-                return self.getToken(pseudocodeParser.NUMBER, i)
+                return self.getTypedRuleContext(pseudocodeParser.TypeContext,i)
+
 
         def COMMA(self, i:int=None):
             if i is None:
@@ -1419,42 +1488,44 @@ class pseudocodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 179
+            self.state = 186
             self.match(pseudocodeParser.ID)
-            self.state = 180
+            self.state = 187
             self.match(pseudocodeParser.R_BRACKET_OPEN)
-            self.state = 189
+            self.state = 196
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==20 or _la==21:
-                self.state = 181
-                _la = self._input.LA(1)
-                if not(_la==20 or _la==21):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 186
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 280002560) != 0):
+                self.state = 188
+                self.type_()
+                self.state = 193
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==18:
-                    self.state = 182
-                    self.match(pseudocodeParser.COMMA)
-                    self.state = 183
-                    _la = self._input.LA(1)
-                    if not(_la==20 or _la==21):
-                        self._errHandler.recoverInline(self)
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & 280264704) != 0):
+                    self.state = 191
+                    self._errHandler.sync(self)
+                    token = self._input.LA(1)
+                    if token in [18]:
+                        self.state = 189
+                        self.match(pseudocodeParser.COMMA)
+                        pass
+                    elif token in [15, 20, 21, 23, 28]:
+                        self.state = 190
+                        self.type_()
+                        pass
                     else:
-                        self._errHandler.reportMatch(self)
-                        self.consume()
-                    self.state = 188
+                        raise NoViableAltException(self)
+
+                    self.state = 195
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 191
+            self.state = 198
             self.match(pseudocodeParser.R_BRACKET_CLOSE)
+            self.state = 199
+            self.match(pseudocodeParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1510,13 +1581,13 @@ class pseudocodeParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_array_elem)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 193
+            self.state = 201
             self.match(pseudocodeParser.ID)
-            self.state = 194
+            self.state = 202
             self.match(pseudocodeParser.S_BRACKET_OPEN)
-            self.state = 195
+            self.state = 203
             self.type_()
-            self.state = 196
+            self.state = 204
             self.match(pseudocodeParser.S_BRACKET_CLOSE)
         except RecognitionException as re:
             localctx.exception = re

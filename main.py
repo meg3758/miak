@@ -6,17 +6,35 @@ from gen.pseudocodeVisitor import pseudocodeVisitor
 pseudocode = '''
 i:=3;
 i := i + 1;
-
-while(i < 10) {
-    function add(x,y){
+function add(x,y){
     x := x + y;
 }
+while(i < 10) {
+    add(x,1);
 }
 for ( i := 40...50 ){
-    function func_1(x, y){
-        x:=4;
+    function func_1(x){
+        return x;
         }
-    }'''
+    func_1(i);
+
+    }
+array := [1,2,3];
+array[2] := 5;
+if(x < 5){
+    x := 6;
+}
+else{
+    x := 4;
+}
+
+while(x < 1000){
+    for(i := 1...10){
+        add(x,5);
+        
+    }
+}
+'''
 if __name__ == '__main__':
     input_stream = InputStream(pseudocode)
     lexer = pseudocodeLexer(input_stream)
