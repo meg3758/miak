@@ -4,10 +4,11 @@ from gen.pseudocodeParser import pseudocodeParser
 from gen.pseudocodeVisitor import pseudocodeVisitor
 
 pseudocode = '''
-i:=3;
+x := 3;
 i := i + 1;
 function add(x,y){
     x := x + y;
+    return x;
 }
 while(i < 10) {
     add(x,1);
@@ -27,11 +28,9 @@ if(x < 5){
 else{
     x := 4;
 }
-
 while(x < 1000){
     for(i := 1...10){
         add(x,5);
-        
     }
 }
 '''

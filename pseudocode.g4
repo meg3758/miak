@@ -51,7 +51,7 @@ while_statement: WHILE R_BRACKET_OPEN expr R_BRACKET_CLOSE C_BRACKET_OPEN (state
 
 statement: (increment|function|for_statement|while_statement|declaration|function_def|if_statement);
 
-expr:NOT? (type|divisibility) (AND|OR|MATH_SYM|COMPARE_SYM)(type|expr|divisibility);
+expr:NOT? (((type) (AND|OR|MATH_SYM|COMPARE_SYM)(type|expr)) | divisibility);
 
 divisibility: (ID|NUMBER) DIVISIBLE BY NUMBER;
 
