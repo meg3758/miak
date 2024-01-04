@@ -5,7 +5,8 @@ from gen.pseudocodeVisitor import pseudocodeVisitor
 
 pseudocode = '''
 x := 3;
-i := i + 1;
+i := 2;
+x := i + 1;
 function add(x,y){
     x := x + y;
     return x;
@@ -13,12 +14,11 @@ function add(x,y){
 while(i < 10) {
     add(x,1);
 }
-for ( i := 40...50 ){
+for ( k := 40...50 ){
     function func_1(x){
         return x;
         }
-    func_1(i);
-
+    func_1(k);
     }
 array := [1,2,3];
 array[2] := 5;
